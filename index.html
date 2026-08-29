@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Lead Finder</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- App Header -->
+    <header class="app-header">
+        <div>
+            <h1>Lead Finder</h1>
+            <p>Find businesses. Find opportunities.</p>
+        </div>
+
+        <button class="profile-button">👤</button>
+    </header>
+
+
+    <!-- Main App -->
+    <main>
+
+        <!-- Search -->
+        <section class="search-section">
+
+            <h2>Find New Leads</h2>
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="businessType"
+                    placeholder="Business type e.g. restaurants"
+                >
+
+                <input
+                    type="text"
+                    id="location"
+                    placeholder="Location e.g. Durban"
+                >
+
+                <button
+                    class="search-button"
+                    onclick="findLeads()">
+                    🔎 Find Leads
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Statistics -->
+        <section class="stats">
+
+            <div class="stat-card">
+                <span id="leadCount">0</span>
+                <p>Leads Found</p>
+            </div>
+
+            <div class="stat-card">
+                <span id="savedCount">0</span>
+                <p>Saved Leads</p>
+            </div>
+
+            <div class="stat-card">
+                <span>0</span>
+                <p>Contacted</p>
+            </div>
+
+        </section>
+
+
+        <!-- Leads -->
+        <section class="leads-section">
+
+            <div class="section-title">
+                <h2>Leads</h2>
+
+                <button onclick="clearLeads()">
+                    Clear
+                </button>
+            </div>
+
+            <div id="leadsContainer">
+
+                <div class="empty-state">
+
+                    <div class="empty-icon">
+                        🔎
+                    </div>
+
+                    <h3>No leads yet</h3>
+
+                    <p>
+                        Search for a business type and location
+                        to find potential leads.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+
+        <a href="#" class="active">
+            🏠
+            <span>Home</span>
+        </a>
+
+        <a href="#">
+            🔎
+            <span>Search</span>
+        </a>
+
+        <a href="#">
+            ⭐
+            <span>Saved</span>
+        </a>
+
+        <a href="#">
+            👤
+            <span>Profile</span>
+        </a>
+
+    </nav>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
